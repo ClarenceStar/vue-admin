@@ -43,6 +43,6 @@
 最终效果如下
 ![效果图](https://github.com/gj459395234/markdownimg/blob/master/vue_admin.gif)
     
-**demo**: [https://github.com/gj459395234/react-admin]<br>
+**demo**: [https://github.com/gj459395234/vue-admin]<br>
 有任何vue方面问题可以加我git地址上企鹅联系我 欢迎探讨
 
