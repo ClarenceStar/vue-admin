@@ -44,5 +44,5 @@
 ![效果图](https://github.com/xinghe94/markdownimg/blob/master/vue_admin.gif)
     
 **demo**: [https://github.com/xinghe94/vue-admin]<br>
-有任何vue方面问题可以加我git地址上企鹅联系我 欢迎探讨
 
+有任何Vue方面问题可以在github上私信我 欢迎交流
