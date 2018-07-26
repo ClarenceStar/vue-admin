@@ -1,14 +1,15 @@
 <template>
-    <section>第3步
-        <el-button style="margin-top: 100px;" @click="next">完成</el-button>
-    </section>
+    <el-card shadow="always" style="width:400px;margin:0 auto;text-align:center">
+        <h1>修改成功</h1>
+        <el-button type="primary" @click="back">返回</el-button>
+    </el-card>
 </template>
 
 <script>
 export default {
     methods: {
-        next () {
-
+        back () {
+            this.$router.push('/')
         }
     },
     mounted () {

@@ -105,10 +105,9 @@
 </template>
 
 <script>
-import util from '../../common/js/util'
 //import NProgress from 'nprogress'
 import { getUserListPage, removeUser, batchRemoveUser, editUser, addUser } from '../../api/api';
-
+import { formatDate } from "../../util/utils";
 export default {
 	data () {
 		return {
@@ -221,11 +220,13 @@ export default {
 		editSubmit: function () {
 			this.$refs.editForm.validate((valid) => {
 				if (valid) {
-					this.$confirm('确认提交吗？', '提示', {}).then(() => {
+					this.$confirm('确认提交吗？', '提示', {
+						type: 'warning'
+					}).then(() => {
 						this.editLoading = true;
 						//NProgress.start();
 						let para = Object.assign({}, this.editForm);
-						para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
+						para.birth = (!para.birth || para.birth == '') ? '' : formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
 						editUser(para).then((res) => {
 							this.editLoading = false;
 							//NProgress.done();
@@ -245,11 +246,13 @@ export default {
 		addSubmit: function () {
 			this.$refs.addForm.validate((valid) => {
 				if (valid) {
-					this.$confirm('确认提交吗？', '提示', {}).then(() => {
+					this.$confirm('确认提交吗？', '提示', {
+						type: 'warning'
+					}).then(() => {
 						this.addLoading = true;
 						//NProgress.start();
 						let para = Object.assign({}, this.addForm);
-						para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
+						para.birth = (!para.birth || para.birth == '') ? '' : formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
 						addUser(para).then((res) => {
 							this.addLoading = false;
 							//NProgress.done();

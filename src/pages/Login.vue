@@ -1,20 +1,20 @@
 <template>
     <div :style="note">
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm login-container">
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm form-container">
             <h3 class="title">系统登录</h3>
             <el-form-item label="用户名" prop="userName">
-                <el-input v-model="ruleForm.userName" type="text" placeholder="请输入账号" clearable autofocus="true"></el-input>
+                <el-input v-model="ruleForm.userName" type="text" placeholder="请输入账号" clearable autofocus></el-input>
             </el-form-item>
             <el-form-item label="密　码" prop="passWord">
                 <el-input v-model="ruleForm.passWord" type="password" placeholder="请输入密码" clearable></el-input>
             </el-form-item>
             <el-form-item>
-                <el-checkbox v-model="ruleForm.checked" class="remember">记住密码</el-checkbox>
+                <el-checkbox v-model="ruleForm.checked">记住密码</el-checkbox>
                 <router-link style = "float:right;margin-right:100px" to="/forget">忘记密码</router-link>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="submitForm('ruleForm')" :loading="logining">登录</el-button>
-                <el-button style = "float:right;margin-right:100px" @click="handleRegister()">注册</el-button>
+                <el-button style = "margin-left:50px" @click="handleRegister()">注册</el-button>
             </el-form-item>
         </el-form>
     </div>
@@ -113,25 +113,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.login-container {
-  /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  background-clip: padding-box;
-  margin: 180px auto;
-  width: 400px;
-  padding: 35px 35px 15px 35px;
-  background: #fff;
-  border: 1px solid #eaeaea;
-  box-shadow: 0 0 25px #cac6c6;
-  .title {
-    margin: 0px auto 40px auto;
-    text-align: center;
-    color: #505458;
-  }
-  .remember {
-    margin: 0px 0px 35px 0px;
-  }
-}
+@import './index.less';
 </style>

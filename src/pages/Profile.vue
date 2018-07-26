@@ -1,5 +1,5 @@
 <template>
-    <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm login-container">
+    <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" style="margin-top:100px" class="demo-ruleForm form-container">
         <h3 class="title">个人信息</h3>
         <el-form-item label="昵称" prop="nickName">
             <el-input type="text" v-model="ruleForm.nickName"></el-input>
@@ -30,7 +30,7 @@
         </el-form-item>
         <el-form-item>
             <el-button type="primary" @click="submitForm('ruleForm')" :loading="updateing">更新</el-button>
-            <el-button @click="handleBack()">返回</el-button>
+            <el-button style="margin-left:50px" @click="handleBack()">返回</el-button>
         </el-form-item>
     </el-form>
 </template>

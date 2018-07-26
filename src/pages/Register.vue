@@ -1,8 +1,8 @@
 <template>
-    <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm login-container">
+    <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm form-container">
         <h3 class="title">系统注册</h3>
         <el-form-item label="用户名" prop="userName">
-            <el-input type="text" v-model="ruleForm2.userName"></el-input>
+            <el-input type="text" v-model="ruleForm2.userName" autofocus></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="passWord">
             <el-input type="password" v-model="ruleForm2.passWord" auto-complete="off"></el-input>
@@ -12,7 +12,7 @@
         </el-form-item>
         <el-form-item>
             <el-button type="primary" @click="submitForm('ruleForm2')" :loading="registering">提交</el-button>
-            <el-button  @click="handleBack()">返回</el-button>
+            <el-button style="margin-left:50px" @click="handleBack()">返回</el-button>
         </el-form-item>
     </el-form>
 </template>

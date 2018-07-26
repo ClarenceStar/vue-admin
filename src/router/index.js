@@ -5,7 +5,8 @@ import Main from '../pages/Main'
 import Forget from '../pages/Forget'
 import Welcome from '../pages/nav1/Welcome'
 import Blog from '../pages/nav2/Blog'
-import Nofind from '../pages/nav2/Nofind'
+import Table from '../pages/nav2/Table'
+import Nofind from '../pages/nav3/Nofind'
 import page1 from '../pages/nav3/Blog'
 import page2 from '../pages/nav3/Nofind'
 import page3 from '../pages/nav4/Blog'
@@ -77,10 +78,10 @@ let routes = [
         ]
       },
       {
-        path: '/main/404',
+        path: '/main/table',
         iconCls: 'el-icon-star-on',
-        component: Nofind,
-        name: '未找到'
+        component: Table,
+        name: '列表'
       }
     ]
   },
@@ -95,13 +96,13 @@ let routes = [
         path: '/main/page1',
         iconCls: 'el-icon-star-on',
         component: page1,
-        name: 'page1'
+        name: '父子组件通信'
       },
       {
         path: '/main/page2',
         iconCls: 'el-icon-star-on',
         component: page2,
-        name: 'page2'
+        name: '兄弟组件通信'
       }
     ]
   },
